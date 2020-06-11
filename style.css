@@ -16,7 +16,7 @@
 body{
     background-color: #101708;
     overflow-x: hidden;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Cabin',sans-serif;
     color: white;
 }
 
@@ -143,10 +143,9 @@ background-image: linear-gradient(to right, white 0, white 100%);
 .activee::before {
   content: " ";
   position: absolute;
-  width: 50px;
+  width: 48px;
   height: 1.5px;
   background-color: #fff;
-  left: auto;
   bottom: -1px;
   animation: scale 2s forwards;
 }
@@ -178,12 +177,12 @@ background-image: linear-gradient(to right, white 0, white 100%);
   bottom: 37%;
   transform: rotate(90deg);
   font-size: 8vw;
-  right: 42%;
+  right: 44%;
   z-index: -2;
   font-weight: 700;
   color: var(--secondary-font-color);
   opacity: .1;
-  animation: scale 2s forwards;
+  animation: spiny 3s forwards;
 }
 
 .conntainer{
@@ -191,13 +190,12 @@ background-image: linear-gradient(to right, white 0, white 100%);
   padding-left: 90px;
   padding-right: 90px;
   height: 40vh;
-  animation: spin 1s forwards;
 }
 
 .sub-headline {
     font-size: 2.5rem;
     font-weight: 100;
-    line-height: 0.4;
+    line-height: 0.5;
     letter-spacing: 2px;
     opacity: 0;
     animation: fadeDown 1s forwards;
@@ -210,6 +208,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   font-size: 5.3rem;
   text-transform: uppercase;
   font-family: "Herr Von Muellerhoff", cursive;
+  font-weight: 600;
 }
 
 .line, .line1 {
@@ -218,26 +217,16 @@ background-image: linear-gradient(to right, white 0, white 100%);
     background-color: white;
     position: relative;
     opacity: 0;
-    animation: grow 2s forwards;
-    animation-delay: 0.9s;
+    animation: right .2s forwards;
+    animation-delay: 2s; 
     margin-bottom: 35px;
     margin-top: 30px;
 }
   
-.asterisk {
-    font-size: .6rem;
-    color: var(--secondary-font-color);
-    margin: 0 .6rem;
-    opacity: 0;
-    animation: spin 3s infinite;
-    animation-delay: 0.5s;
-    margin-bottom: 10px;
-}
-  
 .single-animation {
-    opacity: 0;
-    animation: fadeUp 1s forwards;
-    animation-delay: 1.5s;
+  opacity: 0;
+  animation: fadeUp 1s forwards;
+  animation-delay: 1.5s;
 }
 
 .headline-description h5 {
@@ -322,6 +311,12 @@ background-image: linear-gradient(to right, white 0, white 100%);
 }
 .icons .NextPrev a li:hover{
   opacity: 0.5;
+}
+.icons .NextPrev li  .right{
+  animation: rightx 2s infinite;
+}
+.icons .NextPrev li  .left{
+  animation: leftx 2s infinite;
 }
 @media screen and (max-width:768px){
   body{
@@ -568,6 +563,19 @@ background-image: linear-gradient(to right, white 0, white 100%);
       transform: rotateX(-360deg);
     }
   }
+
+  @keyframes spiny {
+    0% {
+      transform: rotate(90deg);
+    }
+    50% {
+      opacity: .1;
+      transform: rotate(-360deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+  }
   
   @keyframes fadeDown {
     0% {
@@ -586,7 +594,59 @@ background-image: linear-gradient(to right, white 0, white 100%);
       opacity: 1;
     }
     100% {
-      opacity: 0;
+      opacity: 1;
       transform: translateY(-1rem);
+    }
+  }
+
+  @keyframes rightx {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(.3rem);
+    }
+  }
+  @keyframes leftx {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-.3rem);
+    }
+  }
+
+  @keyframes right {
+    0% {
+      opacity: 0.2;
+      transform: translateX(-8rem);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(-6rem);
+    }
+    40% {
+      opacity: 1;
+      transform: translateX(-4rem);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(-2rem);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0rem);
     }
   }
