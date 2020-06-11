@@ -5,6 +5,14 @@ function toggle(){
   menu.classList.toggle('active')
   navbar.classList.toggle('active')
 }
+function fonction(){
+  var header = document.getElementById("header")
+  var navbar = document.getElementById("nav-bar")
+  var menu = document.getElementById("Menu")
+  navbar.classList.remove('active')
+  menu.classList.remove('active')
+  header.classList.add('active')
+}
 
 // image slider
 var slider = document.getElementById("img-slider")
