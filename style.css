@@ -10,10 +10,11 @@
 }
 :root{
     --main-font-color: white;
-    --secondary-font-color: goldenrod;
+    --dark-color:#101708;
+    --secondary-font-color: goldenrod ;
 }
 body{
-    background-color: black;
+    background-color: #101708;
     overflow-x: hidden;
     font-family: 'Poppins',sans-serif;
     color: white;
@@ -26,7 +27,7 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color:#000 ;
+background-color:#101708 ;
 height: 8vh;
 }
 header .logo, header .logo2{
@@ -38,7 +39,7 @@ header .logo, header .logo2{
   letter-spacing: 4px;
   padding-right: 50px;
   display: flex;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 header .logo2{
@@ -96,7 +97,7 @@ position: relative;
 display: flex;
 width: 100%;
 justify-content: space-around;
-padding-right: 10px;
+padding-right: 20px;
 }
 .navbar ul li a{
 position: relative;
@@ -107,7 +108,7 @@ font-size: 14px;
 display: block;
 font-weight: 500;
 justify-content: space-around;
-padding: 0 20px;
+padding: 0 50px;
   
 }
 .underlined {
@@ -121,9 +122,9 @@ background-repeat: no-repeat;
 transition: .5s;
 }
 .underlined:hover {
-background-size: 100% 100%;
-background-position: -50% 50%;
-transition: .2s;
+background-size: 50% 100%;
+background-position: 45% 0%;
+transition: .5s;
 color: #000;
 background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(--secondary-font-color) 100%);
 }
@@ -180,7 +181,7 @@ background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(-
   background-color: var(--secondary-font-color);
   padding-left: 90px;
   padding-right: 90px;
-  height: 50vh;
+  height: 40vh;
   animation: spin 1s forwards;
 }
 
@@ -201,14 +202,7 @@ background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(-
   text-transform: uppercase;
   font-family: "Herr Von Muellerhoff", cursive;
 }
-  
-  
-.separator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-  
+
 .line, .line1 {
     width: 100%;
     height: 0.2rem;
@@ -268,13 +262,13 @@ background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(-
     color: var(--body-font-color);
     border-radius: 0.2rem;
     transition: background-color 0.5sec;
-    color: black;
+    color: var(--dark-color);
 }
   
 .cta-btn:hover,
 .cta-btn:focus {
     color: var(--secondary-font-color);
-    background-color: black;
+    background-color: var(--dark-color);
 }
 
 .images{
@@ -331,7 +325,7 @@ background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(-
   .underlined:hover{
     background-size: 0 0;
   }
-  header .logo{
+  header .logo,header .logo2{
     font-size: 1.4rem;
     margin-left: 40px;
   }
@@ -354,7 +348,7 @@ background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(-
   .navbar{
     position: fixed;
     top: 50px;left: 0;right: 0;bottom: 0;
-    background: #000;
+    background: var(--dark-color);
     opacity: 1;
     z-index: 1;
     display: flex;
@@ -364,12 +358,12 @@ background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(-
     transition: 0.6s;
     transform:scale(0);
     width: 100%;
-    min-height: 120vh;
+    min-height: 130vh;
 }
   .navbar ul li a{
     position: relative;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     padding: 25px 10px;
     color: white;
     font-weight: 700;
@@ -416,13 +410,79 @@ background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(-
   .images{
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 500px;
     margin: 20px 0;
  }
  .icons .NextPrev li  .left:hover,.icons .NextPrev li  .right:hover{
   color: #fff;
 }
 }
+
+/**ABOUT**/
+
+.about{
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding:  100px;
+}
+
+.about .Content{
+  width: 50%;
+  background: transparent;
+  z-index: 1000;
+  padding-right: 10px;
+}
+.heading{
+  color: var(--secondary-font-color);
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: scale 1s forwards;
+  text-align: center;
+}
+.text{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+.border{
+  content: '';
+  width: 30%;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  margin-top:-10px;
+  position: relative;
+  margin-left: 38vh;
+}
+.about .image{
+  z-index: -2;
+  width: 70vh;
+  background-image: url(images-gold/about.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-left: 90px;
+}
+@media (max-width:991px){
+  .about{
+      flex-direction: column;
+      padding: 20px;
+  }
+  .about .ContentBx,.about .imgBx{
+      width: 100%;
+      padding: 20px 0;
+      min-height: 400px;
+      text-align: left;
+  }
+}
+
+
+
 
 /**ANIMATION**/
 
