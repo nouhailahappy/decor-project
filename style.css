@@ -31,6 +31,7 @@ background-color: var(--secondary-font-color);
 height: 8vh;
 top: 10px;
 left: 10%;
+animation: fadeDown 1s forwards;
 }
 header .logo{
   text-align: center;
@@ -55,7 +56,6 @@ header .logo .fa{
 header .toggle{
   visibility: hidden;
   display: none;
-  bottom: 15px;
 }
 header .toggle span{
     position: absolute;
@@ -326,7 +326,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
   header{
     position: fixed;
     z-index: 1500;
-    width: 480px;
+    width: 100%;
+    left: 0;
   }
   .underlined:hover{
     background-size: 0 0;
@@ -457,6 +458,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   animation: scale 1s forwards;
   text-align: center;
   margin-bottom: 20px;
+  text-decoration: overline;
 }
 .text{
   color: #fff;
@@ -490,8 +492,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
   display: flex;
   position: absolute;
   transform: translate(-50%,-50%);
-  bottom: -20vh;
   right: 6rem;
+  bottom: 0rem;
 }
 .social-media li a{
    height: 50px;
@@ -568,7 +570,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
 
 .firsttheme {
   width: 100%;
-  height: 100vh;
+  height: 115vh;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -579,39 +581,34 @@ background-image: linear-gradient(to right, white 0, white 100%);
 .Coontent{
   margin-right:60px;
   padding: 20px 20px 0 10px;
-  margin-bottom: 12rem;
 }
 
-.Coontent .heading{
-  font-size: 16px;
-}
 .Coontent .text{
   color: #fff;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 300;
   letter-spacing: 1px;
   text-align: justify;
-  padding: 10px;
+  padding: 30px;
 }
 
-.firsttheme .imagees{
+.firsttheme .images{
   position: relative;
   width: 440px;
   height: 440px;
-  margin-right: 5rem;
   animation:fadeUp 2s forwards ;
 }
-.firsttheme .imagees img{
+.firsttheme .images img{
   display: none;
   position: absolute;
   top: 0;
-  right: 4%;
+  left: 4%;
   width: 92%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
-.firsttheme .imagees .active{
+.firsttheme .images .active{
   display: block;
 }
 .firsttheme .Coontent .heading{
@@ -649,18 +646,32 @@ background-image: linear-gradient(to right, white 0, white 100%);
   .firsttheme{
     flex-direction: column;
     padding: 50px;
-    margin: 30px;
+    padding-bottom:-70px ;
+    margin: 40px;
     width: 100%;
     height: 140vh;
   }
-  .firsttheme .imagees{
-    height: 100%;
-    margin-left: 5.57rem;
-    margin-top: 2rem;
-  }
+  .firsttheme .images{
+    position: relative;
+    width: 100%;
+    height: 60%;
+ }
   .firsttheme .Coontent{
     margin-left: 4.3rem;
     width: 100%;
+  }
+  .Coontent .heading{
+    display: none;
+  }
+  .firsttheme:before{
+    content: 'Plants theme :';
+    text-decoration: overline;
+    position: relative;
+    font-size: 8vh;
+    z-index: 1;
+    font-weight: 700;
+    color: var(--secondary-font-color);
+    bottom: 3rem;
   }
 }
 
