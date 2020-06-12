@@ -14,7 +14,7 @@
     --secondary-font-color: #8b4000 ;
 }
 body{
-    background-color: #101708;
+    background-color: var(--dark-color);
     overflow-x: hidden;
     font-family: 'Cabin',sans-serif;
     color: white;
@@ -269,14 +269,14 @@ background-image: linear-gradient(to right, white 0, white 100%);
     background-color: var(--dark-color);
 }
 
-.images{
+.home .images{
   position: relative;
   width: 440px;
   height: 440px;
   margin-left: 20rem;
   animation:fadeUp 2s forwards ;
 }
-.images img{
+.home .images img{
   display: none;
   position: absolute;
   top: 0;
@@ -286,7 +286,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   object-fit: cover;
   transition: 0.5s;
 }
-.images .active{
+.home .images .active{
   display: block;
 }
 .icons .NextPrev{
@@ -492,8 +492,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
   display: flex;
   position: absolute;
   transform: translate(-50%,-50%);
-  bottom: 0;
-  right: 6rem;
+  bottom: -20vh;
+  right: -2rem;
 }
 .social-media li a{
    height: 50px;
@@ -722,8 +722,102 @@ form .btnn {
     z-index: 1;
     align-items: center;
     justify-content: center;
+  }
 }
+
+/**First Theme**/
+
+.firsttheme {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 0 50px;
 }
+
+.firsttheme:after{
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+width: 23%;
+height: 100%;
+background: rgb(231, 231, 231);
+z-index: -2;
+}
+
+.Coontent{
+  margin-right:60px;
+  padding: 20px 20px 0 10px;
+  margin-bottom: 12rem;
+}
+
+.Coontent .heading{
+  font-size: 16px;
+}
+.Coontent .text{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.firsttheme .imagees{
+  position: relative;
+  width: 440px;
+  height: 440px;
+  margin-right: 5rem;
+  animation:fadeUp 2s forwards ;
+}
+.firsttheme .imagees img{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 4%;
+  width: 92%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.firsttheme .imagees .active{
+  display: block;
+}
+.firsttheme .Coontent .heading{
+  top: 0;
+}
+.mySlides {
+  display:none;
+}
+
+.icon .Next-Prev{
+  position: relative;
+  display: flex;
+  margin-top: 50%;
+  justify-content: space-between;
+ }
+ .icon .Next-Prev  li{
+   font-size: 30px;
+   list-style: none;
+   cursor: pointer;
+ }
+ .icon li:hover{
+   color: #fff;
+ }
+ .icon li:hover{
+   opacity: 0.5;
+ }
+ .icon li  .right{
+   animation: rightx 2s infinite;
+ }
+ .icon li  .left{
+   animation: leftx 2s infinite;
+ }
+
+
 
 /**ANIMATION**/
 
