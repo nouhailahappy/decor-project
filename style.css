@@ -322,7 +322,6 @@ background-image: linear-gradient(to right, white 0, white 100%);
   body{
     overflow-x: hidden;
   }
-  
   header{
     position: fixed;
     z-index: 1500;
@@ -338,7 +337,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   }
   header .toggle{
       display: block;
-      padding: 15px;
+      padding: 20px;
       position: fixed;
       width: 40px;
       right: 0;
@@ -365,7 +364,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
     transition: 0.6s;
     transform:scale(0);
     width: 100%;
-    min-height: 140vh;
+    min-height: 112vh;
 }
   .navbar ul li a{
     position: relative;
@@ -428,7 +427,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   position: relative;
   width: 100%;
   display: flex;
-  padding: 50px;
+  padding: 74px;
 }
 .about:after{
   content: '';
@@ -489,7 +488,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
 .social-media {
   display: flex;
   position: relative;
-  transform: translate(-50%,50%);
+  justify-content: center;
 }
 .social-media li a{
    height: 50px;
@@ -552,10 +551,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   }
   .social-media{
     justify-content: center;
-    align-items: center;
-    width: 94%;
-    left: 11.6rem;
-    bottom: 60px;
+    top: 2rem;
   }
 }
 
@@ -649,13 +645,17 @@ background-image: linear-gradient(to right, white 0, white 100%);
   }
   .firsttheme:before{
     content: 'Plants theme :';
-    text-decoration: overline;
     position: relative;
-    font-size: 8vh;
     z-index: 1;
-    font-weight: 700;
-    color: var(--secondary-font-color);
     bottom: 2rem;
+    color: var(--secondary-font-color);
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: scale 1s forwards;
+    margin-bottom: 20px;
+    text-decoration: overline; 
   }
 }
 
@@ -778,7 +778,6 @@ form .btnn {
   line-height: 1.7rem;
   text-align: justify;
   padding: 10px;
-  opacity: .7;
 }
 .contact::before{
   content: '';
