@@ -399,12 +399,10 @@ background-image: linear-gradient(to right, white 0, white 100%);
   display: none;
   }
   .home{
-    display: flex;
     flex-direction: column;
-    height: 138vh;
-    padding: 50px;
-    margin: 30px;
     width: 100%;
+    height: 120vh;
+    padding: 60px;
   }
   .home .conntainer{
     background-color: transparent;
@@ -430,7 +428,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   position: relative;
   width: 100%;
   display: flex;
-  padding:  90px;
+  padding: 50px;
 }
 .about:after{
   content: '';
@@ -490,10 +488,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
 
 .social-media {
   display: flex;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  right: 6rem;
-  bottom: 0rem;
+  position: relative;
+  transform: translate(-50%,50%);
 }
 .social-media li a{
    height: 50px;
@@ -527,17 +523,16 @@ background-image: linear-gradient(to right, white 0, white 100%);
 
 @media (max-width:991px){
   .about{
-      flex-direction: column;
-      width: 100%;
-      height: 100vh;
-      padding: 50px;
-      margin: 30px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
   }
   .about .Content{
       width: 100%;
       min-height: 400px;
       z-index: 1;
-      margin-left: -16px;
+      padding: 3px;
   }
   .about .image{
     display: none;
@@ -546,12 +541,10 @@ background-image: linear-gradient(to right, white 0, white 100%);
   .about:after{
     content: '';
     position: absolute;
-    margin:0 0 10px 16px;
-    width: 94%;
-    height: 90%;
+    width: 100%;
     background: url(images-gold/about.jpg);
     z-index: -2;
-    opacity: .4;
+    opacity: .2;
   }
   .border{
     margin: 0 0 10px 12vh;
@@ -561,7 +554,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
     justify-content: center;
     align-items: center;
     width: 94%;
-    left: 16.1rem;
+    left: 11.6rem;
     bottom: 60px;
   }
 }
@@ -579,8 +572,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
 }
 
 .Coontent{
-  margin-right:60px;
-  padding: 20px 20px 0 10px;
+  padding: 20px 50px 0 50px;
+  width: 50%;
 }
 
 .Coontent .text{
@@ -589,7 +582,6 @@ background-image: linear-gradient(to right, white 0, white 100%);
   font-weight: 300;
   letter-spacing: 1px;
   text-align: justify;
-  padding: 30px;
 }
 
 .firsttheme .images{
@@ -645,19 +637,11 @@ background-image: linear-gradient(to right, white 0, white 100%);
 @media screen and (max-width:768px){
   .firsttheme{
     flex-direction: column;
-    padding: 50px;
-    padding-bottom:-70px ;
-    margin: 40px;
     width: 100%;
-    height: 140vh;
+    height: 120vh;
+    padding: 60px;
   }
-  .firsttheme .images{
-    position: relative;
-    width: 100%;
-    height: 60%;
- }
   .firsttheme .Coontent{
-    margin-left: 4.3rem;
     width: 100%;
   }
   .Coontent .heading{
@@ -671,7 +655,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
     z-index: 1;
     font-weight: 700;
     color: var(--secondary-font-color);
-    bottom: 3rem;
+    bottom: 2rem;
   }
 }
 
@@ -723,7 +707,6 @@ background-image: linear-gradient(to right, white 0, white 100%);
   font-weight: 300;
   color: #fff;
   border-bottom: 2px solid #fff;
-  border-LEFT: 1px solid #fff;
 }
 textarea.contact-fomr-text{
   resize: none;
@@ -771,7 +754,6 @@ form .btnn {
   font-size: .8rem;
   letter-spacing: 1.4px;
   border-bottom: 2px solid #fff;
-  border-left: 1px solid #fff;
   opacity: .7;
 }
 .btn:hover{
@@ -811,7 +793,10 @@ form .btnn {
 
 @media screen and (max-width:768px){
   .contact{
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    padding: 60px;
   }
   .contact .image{
     display: none;
@@ -819,20 +804,18 @@ form .btnn {
   .contact::before{
     content: '';
     position: absolute;
-    margin:0 40px 50px 50px;
-    width: 85%;
-    height: 92%;
+    width: 100%;
     background: url(images-gold/contactus1.jpg);
     z-index: -2;
-    opacity: .4;
+    opacity: .2;
   }
   .contact .content{
     width: 100%;
-    padding: 20px;
     text-align: left;
     z-index: 1;
     align-items: center;
     justify-content: center;
+    padding: 15px;
   }
 }
 
