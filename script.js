@@ -46,3 +46,49 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+
+//slide-animation
+
+window.sr = ScrollReveal();
+sr.reveal(".animate-left", {
+  origin: "left",
+  duration: 600,
+  distance: "15rem",
+  delay: 600
+});
+
+sr.reveal(".animate-right", {
+  origin: "right",
+  duration: 600,
+  distance: "18rem",
+  delay: 600
+});
+sr.reveal(".animate-top", {
+  origin: "top",
+  duration: 600,
+  distance: "25rem",
+  delay: 1000
+});
+sr.reveal(".animate-bottom", {
+  origin: "bottom",
+  duration: 1000,
+  distance: "25rem",
+  delay: 600
+});
+
+//readmore pop-up
+function popup(){
+  var popup = document.getElementById('popup');
+  popup.classList.toggle('active');
+}
+
+var modalBtn = document.querySelector('.boutton');
+var modalBg = document.querySelector('.modal-bg');
+var modalClose = document.querySelector('.modal-close');
+modalBtn.addEventListener('click',function(){
+  modalBg.classList.add('bg-active');
+})
+modalClose.addEventListener('click', function(){
+  modalBg.classList.remove('bg-active');
+})
+
