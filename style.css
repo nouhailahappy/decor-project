@@ -812,7 +812,7 @@ button:hover{
 
 #popup{
   color: var(--dark-color);
-  margin-top: 21%;
+  margin-top: 22%;
   z-index: 1;
   position: fixed;
   left: 50%;
@@ -825,11 +825,13 @@ button:hover{
 }
 #popup .container .plant{
   padding:0 20PX 0 0px;
+  width: 30%;
 }
 
 #popup .container1 .plant{
   padding:0 20PX 0 0px;
 }
+
 #popup.active{
   visibility: visible;
   opacity: 1;
