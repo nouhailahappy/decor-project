@@ -92,3 +92,24 @@ modalClose.addEventListener('click', function(){
   modalBg.classList.remove('bg-active');
 })
 
+//Show / Hide 
+
+$(document).ready(function(){
+  $(".read").click(function(){
+    $(this).prev().toggle();
+
+    if($(this).text()=='+(1)'){
+      $(this).text('Less');
+    }
+    else if($(this).text()=='Read more'){
+      $(this).text('Read less');
+    }
+    else if($(this).text()=='Read less'){
+      $(this).text('Read more');
+    }
+    else{
+      $(this).text('+(1)');
+    }
+  });
+});
+

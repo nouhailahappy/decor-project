@@ -135,14 +135,17 @@ transition: .5s;
 color: var(--secondary-font-color);
 background-image: linear-gradient(to right, white 0, white 100%);
 }
-.activee {
+.activee:hover {
+  color: var(--dark-color);
   position: relative;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .activee::before {
   content: " ";
   position: absolute;
-  width: 48px;
+  width: 46px;
   height: 1.5px;
   background-color: #fff;
   bottom: -1px;
@@ -456,13 +459,15 @@ background-image: linear-gradient(to right, white 0, white 100%);
   margin-bottom: 20px;
   text-decoration: overline;
 }
-.text{
-  color: #fff;
-  font-size: 16px;
+.about .text{
+  color: rgb(231, 231, 231);
+  font-size: 18px;
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 1.8px;
+  line-height: 26px;
   text-align: justify;
-  padding: 10px;
+  padding: 20px;
+  margin-top: 3rem;
 }
 .border{
   content: '';
@@ -566,32 +571,34 @@ background-image: linear-gradient(to right, white 0, white 100%);
   display: flex;
 }
 
+.secondtheme .Coontent{
+  width: 90%;
+}
+
 .Coontent{
-  padding: 6rem 50px 0 50px;
-  width: 50%;
-  align-items: center;
-  justify-content: center;
+  padding: 1rem 0px 0 10px;
+  width: 60%;
 }
 
 .theme:after{
   content: '';
   position: absolute;
   width: 25.5%;
-  height: 132.65rem;
+  height: 100%;
   top: 77.65rem;
-  left: 0;
+  right: 0;
   background: var(--dark-color);
   z-index: 1;
 }
 
 .subtitle{
-  text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--dark-color);
   font-family: 'Poppins',sans-serif;
   letter-spacing: 1px;
   padding: 20px;
+  text-align: center;
 }
 
 .Coontent .text{
@@ -603,14 +610,11 @@ background-image: linear-gradient(to right, white 0, white 100%);
 }
 
 .Coontent .plantlist{
-  width: 150%;
   color: #000;
   font-size: 1rem;
   font-weight: 500;
   text-align: justify;
   font-family: 'Poppins',sans-serif;
-  margin-top: 3rem;
-  margin-left: -12rem;
 }
 .Coontent .plantlist .lroom, .oroom, .broom{
   display: flex;
@@ -620,7 +624,6 @@ background-image: linear-gradient(to right, white 0, white 100%);
 
 .Coontent .plantlist .lroom a{
   margin-right: 2rem;
-  
 }
 .Coontent .plantlist .oroom a{
   margin-right: 2rem;
@@ -628,13 +631,35 @@ background-image: linear-gradient(to right, white 0, white 100%);
 .Coontent .plantlist .broom a{
   margin-right: 2rem;
 }
-
+.more{
+  display: none;
+}
+button , .morebtn{
+  background-color: transparent;
+  padding: 5px 10px;
+  color: var(--dark-color);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  min-height: 20px;
+  margin: auto;
+  margin-right: 2rem;
+  border: solid 1.5px #000;
+  border-radius: 5px;
+  font-weight: 600;
+  font-family: 'Cabin';
+  text-align: center;
+}
+button:hover{
+  color: var(--secondary-font-color);
+}
 .firsttheme .images{
   position: relative;
-  width: 460px;
-  height: 500px;
+  width: 400px;
+  height: 420px;
   z-index: 2;
   animation:fadeUp 2s forwards ;
+  margin:0 auto;
 }
 .firsttheme .images img{
   display: none;
@@ -673,11 +698,11 @@ background-image: linear-gradient(to right, white 0, white 100%);
  .icon li:hover{
    opacity: 0.5;
  }
- .icon li  .right{
+ .icon li  .left{
    animation: rightx 2s infinite;
    color: #101708;
  }
- .icon li  .left{
+ .icon li  .right{
    animation: leftx 2s infinite;
  }
 
@@ -715,7 +740,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
 .blog{
   width: 100%;
   height: 100%;
-  padding: 90px;
+  padding: 50px;
+  z-index: 1;
 }
 
 .blog::before{
@@ -723,8 +749,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
   position: absolute;
   width: 25.6%;
   left: 0;
-  top: 177.65rem;
-  height: 80.5rem;
+  height:100%;
+  margin-top: -53px;
   background: rgb(231, 231, 231);
   z-index: -2;
 }
@@ -746,7 +772,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 20rem;
+  width: 17rem;
 }
 .containerr .blogtxt{
   width: 70%;
@@ -777,6 +803,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
 }
 
  h4, #popup p{
+   padding: 20px;
   text-align: left;
   font-size: 14px;
   font-family: 'Changa', sans-serif;
@@ -784,21 +811,25 @@ background-image: linear-gradient(to right, white 0, white 100%);
 
 
 #popup{
-  
   color: var(--dark-color);
-  margin-top: 10%;
+  margin-top: 21%;
   z-index: 1;
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100%;
+  width: 90%;
   padding: 10px;
   background-color: white;
   visibility: hidden;
-  opacity: 1;
-  transition: .3s;
+  opacity: 2;
+}
+#popup .container .plant{
+  padding:0 20PX 0 0px;
 }
 
+#popup .container1 .plant{
+  padding:0 20PX 0 0px;
+}
 #popup.active{
   visibility: visible;
   opacity: 1;
@@ -806,12 +837,11 @@ background-image: linear-gradient(to right, white 0, white 100%);
   z-index: 1;
 }
 .popup-img{
-  max-width: 80%;
+  max-width: 100%;
   display: block;
-  height: 150px;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
 }
 .sent{
   font-size: 16px;
@@ -824,13 +854,12 @@ background-image: linear-gradient(to right, white 0, white 100%);
   width: 100%;
   height: 100%;
   top: 0;left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #101708da;
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0sopacity .5s;
 }
 .bg-active{
   visibility: visible;
@@ -838,6 +867,13 @@ background-image: linear-gradient(to right, white 0, white 100%);
   z-index: 1;
 }
 
+.section-subtitle1{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--dark-color);
+  letter-spacing: 1.5px;
+}
 /**CONTACT**/
 
 .contact{
@@ -997,6 +1033,45 @@ form .btnn {
   }
 }
 
+/*footer*/
+
+footer {
+  background-color: var(--main-font-color-dark);
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+.back-to-top {
+  position: absolute;
+  top: -1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.back-to-top i {
+  display: block;
+  color: rgb(231, 231, 231);
+  font-size: 1rem;
+  padding: 1.1rem;
+  animation: up 2s infinite;
+}
+
+.footer-content {
+  overflow: hidden;
+  max-width: 77.5rem;
+  margin: auto;
+}
+.footer-content-divider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cpr{
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: rgb(231, 231, 231);
+}
+
 /**ANIMATION**/
 
 @keyframes fadeUp {
@@ -1068,7 +1143,7 @@ form .btnn {
     }
     100% {
       opacity: 1;
-      transform: translateY(-1rem);
+      transform: translateY(-.5rem);
     }
   }
 
