@@ -132,7 +132,7 @@ transition: .5s;
 background-size: 50% 100%;
 background-position: 45% 0%;
 transition: .5s;
-color: var(--secondary-font-color);
+color: var(--dark-color);
 background-image: linear-gradient(to right, white 0, white 100%);
 }
 .activee:hover {
@@ -179,7 +179,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
   bottom: 37%;
   transform: rotate(90deg);
   font-size: 8vw;
-  right: 44%;
+  margin-left: auto;
+  margin-right: auto;
   z-index: -2;
   font-weight: 700;
   color: var(--secondary-font-color);
@@ -480,12 +481,13 @@ background-image: linear-gradient(to right, white 0, white 100%);
   margin-left: 38vh;
 }
 .about .image{
-  width: 70vh;
+  width: 35%;
   background-image: url(images-gold/about.jpg);
   background-size: cover;
   background-position: center;
-  margin-right: 90px;
-  height: 75vh;
+  margin-left: 20px;
+  right: 0;
+  height: 80vh;
   z-index: 1;
 }
 
@@ -570,20 +572,39 @@ background-image: linear-gradient(to right, white 0, white 100%);
 .firsttheme {
   display: flex;
 }
+.planttheme{
+  background-color: rgb(231, 231, 231);
+  padding: 50px;
+  padding-top: 80px;
+}
+.planttheme::after{
+  content: '';
+  position: absolute;
+  width: 18%;
+  height: 313.2%;
+  top: 0;
+  right: 0;
+  background: var(--dark-color);
+  z-index: -1500;
+}
 
 .secondtheme .Coontent, .thirdtheme .Coontent{
   width: 90%;
 }
 
-.Coontent{
-  padding: 1rem 0px 0 10px;
-  width: 60%;
+.firsttheme .Coontent{
+  width: 63%;
+  margin-right: 2rem;
+}
+.planttheme .Coontent{
+  padding: 1rem 2rem 0 10px;
+  width: 67%;
 }
 
 .theme:after{
   content: '';
   position: absolute;
-  width: 25.5%;
+  width: 18%;
   height: 95%;
   top: 77.65rem;
   right: 0;
@@ -641,21 +662,23 @@ background-image: linear-gradient(to right, white 0, white 100%);
 button , .morebtn{
   background-color: transparent;
   padding: 5px 10px;
-  color: var(--dark-color);
+  color: white;
   font-size: 14px;
   letter-spacing: 2px;
   cursor: pointer;
   min-height: 20px;
   margin: auto;
-  margin-right: 2rem;
-  border: solid 1.5px #000;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 500;
   font-family: 'Cabin';
   text-align: center;
+  border: none;
 }
 button:hover{
-  color: var(--secondary-font-color);
+  color: var(--dark-color);
+  animation: spin 1s forwards;
 }
 .firsttheme .images{
   position: relative;
@@ -663,7 +686,7 @@ button:hover{
   height: 420px;
   z-index: 2;
   animation:fadeUp 2s forwards ;
-  margin:0 auto;
+  right: 0;
 }
 .firsttheme .images img{
   display: none;
@@ -703,11 +726,11 @@ button:hover{
    opacity: 0.5;
  }
  .icon li  .left{
-   animation: rightx 2s infinite;
+   animation: leftx 2s infinite;
    color: #101708;
  }
  .icon li  .right{
-   animation: leftx 2s infinite;
+   animation: rightx 2s infinite;
  }
 
 @media screen and (max-width:768px){
@@ -751,7 +774,7 @@ button:hover{
 .blog::before{
   content: '';
   position: absolute;
-  width: 25.6%;
+  width: 18%;
   left: 0;
   height:100%;
   margin-top: -53px;
@@ -1047,6 +1070,7 @@ footer {
   position: relative;
   padding: 20px;
 }
+
 .back-to-top {
   position: absolute;
   top: -1.3rem;
