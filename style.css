@@ -577,14 +577,36 @@ background-image: linear-gradient(to right, white 0, white 100%);
   padding: 50px;
   padding-top: 80px;
 }
+
 .planttheme::after{
   content: '';
   position: absolute;
   width: 18%;
-  height: 313.2%;
+  height: 318%;
   top: 0;
   right: 0;
   background: var(--dark-color);
+  z-index: -1500;
+}
+
+.mirror::after{
+  content: '';
+  position: absolute;
+  width: 18%;
+  height: 691%;
+  top: 0;
+  right: 0;
+  background: #704343;
+  z-index: -1500;
+}
+.candles::after{
+  content: '';
+  position: absolute;
+  width: 18%;
+  height: 542%;
+  top: 0;
+  right: 0;
+  background: #6d3b19;
   z-index: -1500;
 }
 
@@ -600,6 +622,15 @@ background-image: linear-gradient(to right, white 0, white 100%);
   padding: 1rem 2rem 0 10px;
   width: 67%;
 }
+.mirror .Coontent{
+  padding: 1rem 2rem 0 10px;
+  width: 82%;
+}
+.candles .Coontent{
+  padding: 1rem 2rem 0 10px;
+  width: 82%;
+}
+
 
 .theme:after{
   content: '';
