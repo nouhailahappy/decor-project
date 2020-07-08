@@ -68,7 +68,7 @@ header .toggle span{
   background: white;
   }
   header .toggle .three{
-      background:  black;
+      background:  white;
       width: 25px;
       }
   header .toggle .four{
@@ -135,14 +135,17 @@ background-position: 45% 0%;
 transition: .5s;
 color: var(--dark-color);
 background-image: linear-gradient(to right, white 0, white 100%);
+font-weight: bold;
+color: var(--secondary-font-color);
 }
 .activee:hover {
   color: var(--dark-color);
+  font-weight: bold;
 }
 .activee::before {
   content: " ";
   position: absolute;
-  width: 46px;
+  width: 47px;
   height: 1.5px;
   background-color: #fff;
   bottom: -1px;
@@ -326,6 +329,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
     z-index: 1500;
     width: 100%;
     left: 0;
+    top: 0;
   }
   .underlined:hover{
     background-size: 0 0;
@@ -336,7 +340,7 @@ background-image: linear-gradient(to right, white 0, white 100%);
   }
   header .toggle{
       display: block;
-      padding: 20px;
+      padding: 16px;
       position: fixed;
       width: 40px;
       right: 0;
@@ -352,8 +356,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
   }
   .navbar{
     position: fixed;
-    top: 50px;left: 0;right: 0;bottom: 0;
-    background: var(--dark-color);
+    top: 51px;left: 0;right: 0;bottom: 0;
+    background: var(--secondary-font-color);
     opacity: 1;
     z-index: 1500;
     display: flex;
@@ -363,12 +367,12 @@ background-image: linear-gradient(to right, white 0, white 100%);
     transition: 0.6s;
     transform:scale(0);
     width: 100%;
-    min-height: 112vh;
+    min-height: 100vh;
 }
   .navbar ul li a{
     position: relative;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     padding: 25px 10px;
     color: white;
     font-weight: 700;
@@ -403,11 +407,12 @@ background-image: linear-gradient(to right, white 0, white 100%);
     padding: 60px;
   }
   .home .conntainer{
-    background-color: transparent;
     justify-content: center;
+    align-items: center;
     position: relative;
-    width: 280px;
-    max-height: 320px;
+    width: 276px;
+    height: 250px;
+    bottom: 2rem;
   }
   .home .images{
     position: relative;
@@ -631,9 +636,12 @@ background-image: linear-gradient(to right, white 0, white 100%);
   z-index: 1;
   opacity: 0;
 }
-.thirdtheme .mirrors{
+.mirrorstheme .mirrors{
   display: flex;
   justify-content: center;
+}
+.mirrors img{
+  margin-left: 1rem;
 }
 .thirdtheme  p{
   color: var(--dark-color);
@@ -689,8 +697,8 @@ background-image: linear-gradient(to right, white 0, white 100%);
 }
 .Coontent .plantlist .lroom, .oroom, .broom{
   display: flex;
-  margin: 2rem 0 2rem 6rem;
-  width: 150%;
+  margin: 2rem 0 2rem 0rem;
+  width: 100%;
 }
 .Coontent .plantlist .lroom a{
   margin-right: 2rem;
@@ -736,9 +744,8 @@ button:hover{
 .firsttheme .images{
   position: relative;
   width: 400px;
-  height: 420px;
+  height: 450px;
   z-index: 2;
-  animation:fadeUp 2s forwards ;
   right: 0;
 }
 .firsttheme .images img{
@@ -752,7 +759,6 @@ button:hover{
   transition: 0.5s;
 }
 .img{
-  animation:fadeUp 2s forwards ;
   margin-left: 3rem;
   margin-top: 1rem;
 }
@@ -794,6 +800,9 @@ button:hover{
 
 .Coontent .readmore button{
   margin-left: 40%;
+}
+.btnmr{
+  text-align: center;
 }
 
 @media screen and (max-width:768px){
@@ -852,6 +861,27 @@ button:hover{
     flex-direction: column;
     width: 100%;
   }
+  .mirrors img{
+    margin-left: -1rem;
+  }
+  .mirrors{
+    flex-direction: column;
+  }
+  .lroom, .broom , .oroom{
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+  .lroom a , .broom a, .oroom a{
+    margin-left: -1rem;
+  }
+ .mirrorstheme .plantlist{
+   text-align: center;
+ } 
+ .mirrorstheme .plantlist li p{
+   text-align: justify;
+ }
 }
 
 /**Blog**/
@@ -1228,7 +1258,7 @@ footer {
 }
 @media screen and (max-width:768px){
   footer{
-    width: 121%;
+    width: 100%;
   }
 }
 
