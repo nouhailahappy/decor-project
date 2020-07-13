@@ -862,19 +862,25 @@ button:hover{
     width: 100%;
   }
   .mirrors img{
-    margin-left: -1rem;
+    margin-right: auto;
+    margin-left: auto;
   }
   .mirrors{
     flex-direction: column;
   }
-  .lroom, .broom , .oroom{
+  .mirrorstheme{
+    padding-top: 25px;
+  }
+  .mirrorstheme .plantlist .lroom {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .lroom , .broom , .oroom{
     flex-direction: column;
     width: 100%;
-    margin: 0 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-  }
-  .lroom a , .broom a, .oroom a{
-    margin-left: -1rem;
   }
  .mirrorstheme .plantlist{
    text-align: center;
@@ -889,31 +895,18 @@ button:hover{
 .blog{
   width: 100%;
   height: 100%;
-  padding: 50px;
   z-index: 1;
 }
-
-.blog::before{
-  content: '';
-  position: absolute;
-  width: 18%;
-  left: 0;
-  height:100%;
-  margin-top: -53px;
-  background: rgb(231, 231, 231);
-  z-index: -2;
-}
-
 .containerr{
   align-items: center;
-  position: relative;
   transition: 0.5s;
   display: flex;
-  padding: 20px;
+  flex-direction: row;
+  padding: 50px;
 }
 .containerr .contentt{
   position: relative;
-  padding: 20px;
+  padding: 50px;
   height: 100%;
 }
 .containerr .contentt img{
@@ -923,8 +916,9 @@ button:hover{
   width: 17rem;
 }
 .containerr .blogtxt{
-  width: 90%;
-  text-align: center;
+  width: 80%;
+  padding: 30px;
+  margin: 20px;
 }
 .containerr .blogtxt h4{
   margin-left: auto;
@@ -935,6 +929,8 @@ button:hover{
   letter-spacing: 1px;
   font-weight: 300;
   font-family: 'Poppins',sans-serif;
+  border-left: solid var(--secondary-font-color) 1px;
+  border-top: solid var(--secondary-font-color) 1px;
 }
 .contentt .boutton, .boutton{
   background-color: var(--secondary-font-color);
@@ -1028,28 +1024,46 @@ button:hover{
   letter-spacing: 1.5px;
 }
 
-@media screen and(max-width:768px){
+@media screen and (max-width:768px){
   .blog{
     flex-direction: column;
     width: 100%;
-    height: 100%;
-    padding: 50px;
   }
   .containerr{
     flex-direction: column;
     display: flex;
-  }
-  .containerr .contentt{
-    position: relative;
     padding: 20px;
-    height: 100%;
   }
-  .containerr .contentt img{
+  .blog .containerr .contentt img{
     visibility: hidden;
+    display: none;
   }
   .containerr .blogtxt{
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+  }
+  
+  .containerr .blogtxt::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    left: 5rem;
+    margin-top: 11.2rem;
+    background: url(plants/plant-bg.jpg);
+    z-index: -2;
+    opacity: .5;
+  }
+  .container, .container2{
+    border-bottom: solid var(--dark-color) 1px;
+  }
+  #popup{
+    position: absolute;
+    margin-top: 82%;
+    height: 80%;
+    overflow-y: scroll;
   }
 }
 /**CONTACT**/
@@ -1207,7 +1221,6 @@ form .btnn {
   .contact .content{
     width: 100%;
     text-align: left;
-    z-index: 1;
     align-items: center;
     justify-content: center;
     padding: 15px;
@@ -1258,7 +1271,7 @@ footer {
 }
 @media screen and (max-width:768px){
   footer{
-    width: 100%;
+    width: 121%;
   }
 }
 
