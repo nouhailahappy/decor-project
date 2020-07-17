@@ -997,7 +997,7 @@ button:hover{
 
  h4, #popup p{
   padding: 20px;
-  text-align: left;
+  text-align: justify;
   font-size: 14px;
   font-family: 'Changa', sans-serif;
   color: black;
@@ -1006,7 +1006,9 @@ button:hover{
 
 #popup{
   color: var(--dark-color);
-  margin-top: 21%;
+  margin-top: 22.5%;
+  height: 85vh;
+  overflow-x: scroll;
   z-index: 1;
   position: fixed;
   left: 50%;
@@ -1016,16 +1018,21 @@ button:hover{
   background-color: white;
   visibility: hidden;
   opacity: 2;
+  
 }
 #popup .container .plant{
   padding:0 20PX 0 0px;
-  width: 30%;
+  width: 25%;
 }
 
 #popup .container1 .plant{
   padding:0 20PX 0 0px;
+  width: 25%;
 }
 
+#popup .container2 .plant{
+  width: 25%;
+}
 #popup.active{
   visibility: visible;
   opacity: 1;
@@ -1108,10 +1115,20 @@ button:hover{
     opacity: .5;
   }
   #popup{
+    padding-top: 2rem;
     position: absolute;
     margin-top: 82%;
     height: 80%;
     overflow-y: scroll;
+  }
+  #popup .container{
+    margin-bottom: 1rem;
+    border-bottom:solid 2px var(--dark-color) ;
+    border-top:solid 2px var(--dark-color) ; 
+  }
+  #popup .container2 {
+    margin-bottom: 1rem;
+    border-bottom: solid 2px var(--dark-color);
   }
 }
 /**CONTACT**/
@@ -1225,7 +1242,6 @@ form .btnn {
   margin-left: 20px;
   right: 0;
   height: 80vh;
-  z-index: 1;
 }
 .fileTxt{
   color: var(--dark-color);
