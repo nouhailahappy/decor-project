@@ -367,7 +367,7 @@ color: var(--secondary-font-color);
     transition: 0.6s;
     transform:scale(0);
     width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
 }
   .navbar ul li a{
     position: relative;
@@ -576,10 +576,10 @@ color: var(--secondary-font-color);
   padding: 30px;
 }
 .secondtheme{
-  padding: 30px;
+  padding: 40px;
 }
 .thirdtheme{
-  padding: 30px;
+  padding: 40px;
 }
 .planttheme{
   background-color: rgb(231, 231, 231);
@@ -606,7 +606,8 @@ color: var(--secondary-font-color);
 }
 .planttheme .Coontent{
   padding: 1rem 2rem 0 10px;
-  width: 67%;
+  width: 90%;
+  
 }
 .mirrorstheme .Coontent{
   background-color: rgb(231, 231, 231); 
@@ -866,10 +867,17 @@ button:hover{
     margin-left: auto;
   }
   .mirrors{
+    width: 100%;
     flex-direction: column;
+    text-align: center;
   }
   .mirrorstheme{
+    padding: 20px;
     padding-top: 25px;
+  }
+  .mirrorstheme .Coontent{
+    width: 100%;
+    height: 100%;
   }
   .mirrorstheme .plantlist .lroom {
     margin-right: auto;
@@ -888,6 +896,45 @@ button:hover{
  .mirrorstheme .plantlist li p{
    text-align: justify;
  }
+ .planttheme{
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+ }
+ .planttheme .plantlist .lroom {
+   left: 50%;
+   width: 100%;
+ }
+ .plantlist li{
+   text-align: center;
+ }
+
+ .planttheme .images{
+   margin-top: 4rem;
+ }
+ .planttheme .Coontent{
+   width: 100%;
+ }
+ .planttheme .Coontent p{
+   text-align: justify;
+ }
+ .candles .head .images{
+   display: none;
+   visibility: hidden;
+ }
+ .candles{
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  padding-top: 3.5rem;
+ }
+ .candles .text, .mirrorstheme .text{
+   width: 100%;
+   text-align: justify;
+ }
+
 }
 
 /**Blog**/
@@ -902,7 +949,7 @@ button:hover{
   transition: 0.5s;
   display: flex;
   flex-direction: row;
-  padding: 50px;
+  padding: 20px;
 }
 .containerr .contentt{
   position: relative;
@@ -1044,6 +1091,10 @@ button:hover{
     margin-right: auto;
     text-align: center;
   }
+  .containerr .contentt{
+    padding: 0;
+    display: none;
+  }
   
   .containerr .blogtxt::before{
     content: '';
@@ -1055,9 +1106,6 @@ button:hover{
     background: url(plants/plant-bg.jpg);
     z-index: -2;
     opacity: .5;
-  }
-  .container, .container2{
-    border-bottom: solid var(--dark-color) 1px;
   }
   #popup{
     position: absolute;
