@@ -849,6 +849,9 @@ button:hover{
   text-align: center;
 }
 @media screen and (max-width:768px){
+  .theme{
+    width: 110%;
+  }
   .firsttheme{
     flex-direction: column;
     width: 100%;
@@ -1406,7 +1409,7 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(180, 180, 180);
+  background: var(--secondary-font-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {

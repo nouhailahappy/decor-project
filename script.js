@@ -52,26 +52,26 @@ function showDivs(n) {
 window.sr = ScrollReveal();
 sr.reveal(".animate-left", {
   origin: "left",
-  duration: 600,
+  duration: 300,
   distance: "15rem",
   delay: 600
 });
 
 sr.reveal(".animate-right", {
   origin: "right",
-  duration: 600,
+  duration: 300,
   distance: "18rem",
   delay: 600
 });
 sr.reveal(".animate-top", {
   origin: "top",
-  duration: 600,
+  duration: 300,
   distance: "25rem",
   delay: 1000
 });
 sr.reveal(".animate-bottom", {
   origin: "bottom",
-  duration: 1000,
+  duration: 400,
   distance: "25rem",
   delay: 600
 });
