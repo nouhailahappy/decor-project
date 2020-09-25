@@ -1068,7 +1068,7 @@ button:hover{
   transform: translate(-50%, -50%);
   width: 60%;
   padding: 10px;
-  background-color: #d0d0b8;
+  background-color: #e9e9d6;
   visibility: hidden;
   opacity: 2;
   
@@ -1176,8 +1176,9 @@ button:hover{
   #popup{
     padding-top: 2rem;
     position: absolute;
-    margin-top: 82%;
+    margin-top: 118vh;
     height: 80%;
+    width: 90%;
     overflow-y: scroll;
   }
   #popup .container{
