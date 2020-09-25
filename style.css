@@ -337,7 +337,7 @@ color: var(--secondary-font-color);
   }
   .navbar{
     position: fixed;
-    top: 51px;left: 0;right: 0;bottom: 0;
+    top: 3.4rem;left: 0;right: 0;bottom: 0;
     background: var(--secondary-font-color);
     opacity: 1;
     z-index: 1500;
@@ -348,7 +348,7 @@ color: var(--secondary-font-color);
     transition: 0.6s;
     transform:scale(0);
     width: 100%;
-    min-height: 120vh;
+    min-height: 125vh;
 }
   .navbar ul li a{
     position: relative;
